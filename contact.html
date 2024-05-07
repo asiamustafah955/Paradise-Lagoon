@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Welcome to the most extraordinary hotel">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <title>Paradise Lagoon | Contact</title>
+</head>
+<body>
+    <header>  
+        <!--This is the navigation bar in the contact page and it contains the links to differnt pages--> 
+        <nav>
+            <div class="nav__logo"><img id="img" src="logo.png" alt=" Paradise Lagoon "></div>
+            <ul class="nav__links">
+                <li class="link"><a href="homePage.html">Home</a></li>
+                <li class="link"><a href="">Rooms</a>
+                    <ul class="dropdown">
+                        <li><a href="penthouse.html" class="nav-rooms"> Pent House</a></li>
+                        <li><a href="family.html" class="nav-rooms">Family Room</a></li>
+                        <li><a href="deluxe.html" class="nav-rooms">Deluxe Suite</a></li>
+                    </ul>
+                
+                </li>
+                <li class="link"><a href="Listings.html">Room Listings</a></li>
+                <li class="link"><a href="contact.html">Contact us</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <section id="contact-form" class="py-3">
+        <div class="container">
+            <!--In this section, we have the forms that customers fill to give a feedback on their experience in the hotel-->
+            <h1 class="l-heading"><span class="text-primary">Contact</span>Us</h1>
+            <p>Please fill out the form below to contact us</p>
+            <form action="process.php">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea type="text" name="message" id="message"></textarea>
+                </div>
+                <button type="submit" class="btn" value="click" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+        <!--This ddivision holds the link to the map of the hotel-->
+        <div class="container">
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9201794773035!2d79.83596087359307!3d7.13522901575537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f1f24544fe35%3A0x27f2244597575969!2sHotel%20Lagoon%20Paradise!5e0!3m2!1sen!2sug!4v1712307530983!5m2!1sen!2sug" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+    <!--This section contains the contact details of the hotel including location,Phone number and email-->
+    <section id="contact-info" class="bg-dark">
+        <div class="container">
+            <div class="box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Location</h3>                
+                <p>12/7 Dungalpitiya, Negombo, Sri Lanka</p>
+                <p>P.O Box 1246 Negombo, Sri Lanka</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Phone Number</h3>
+                <p>(+94) 750-799-546</p>
+                <p>(+94) 751-4638-79</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>  
+                <p>paradiselagoon.hotel@gmail.com</p>
+            </div>
+        </div>
+       
+    </section>
+   
+   <!--This is the footer of the webpage-->
+    <footer id="main-footer">
+        <p>Paradise Lagoon &copy; 2019, All Rights Reserved</p>
+    </footer>
+    <script text="text/javascript" src="contacts.js"></script>
+</body>
+</html>

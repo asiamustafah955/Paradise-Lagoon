@@ -1,0 +1,420 @@
+/*Default style of everything*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+/*Styling the navigation element*/
+nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f4eb;
+    height: 60px;
+  }
+  
+ /*Styling the logo in the nav bar*/
+  #img{
+    width: 110px;
+    height: 120px;
+    position: relative;
+    margin-top: 10%; /*Such that some part of the logo at the top is not hidden*/
+
+  }
+  
+/*Styling the list of links in the nav bar*/
+  .nav__links {
+    list-style: none; /*To remove the dots before each list item*/
+    display: flex;    /*makes the list to be as though a single column*/
+    align-items: center;
+    gap: 2rem;
+    
+  }
+
+  
+/*Styling  list items*/  
+  .link a{
+    font-weight: 500px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    font-size: 20px;
+    padding-right: 15px; /*The items leave only a small space to the right,so they appear more on the right*/
+    font-family: Playfair Display;
+  }
+
+ /*What happens when the cursor passes the link item*/ 
+.link a:hover {
+    color: #935116 ;
+  }
+
+/*The column of list items does not appear vertical but horizontal*/  
+li{
+    float:left;
+}
+
+/*Styling the slider container*/
+.slider{ 
+    overflow: hidden; /*Such that only a single image is seen at a time*/
+}
+
+/*Styling the list of slider items*/
+.list{
+    position: relative;
+    margin: 0;
+    left: 0;
+    width: 500%;
+    animation: 20s slide infinite; /*To move to the next image in the slider*/
+}
+
+/*Styling individual slider items*/
+.items{
+    position: relative;
+    width: 20%;
+    float: left; 
+}
+
+/*Styling individual images in the items class*/
+.items img{
+    width: 100%;
+    height:500px;
+    float: left;  /*instead of all of them appearing vertically*/
+}
+
+/*Keyframes specify the beginning and ending of each image item*/
+@keyframes slide{
+    0%{
+        left:0; /*Since items float left ie they are positioned at the left edge initially , there is 0 progress.*/
+    }
+    20%{
+        left:0; /*at 20% progress, there is still no change in the slider items*/
+    }
+    25%{
+        left:-100%; /*at 25% progress, slider items move left by width of of one item since each item occupies 20% of the container width*/
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-400%;
+    }
+}
+
+
+/*How website responds to smaller screens*/
+@media screen and (max-width: 1100px){
+
+    /*Flex container styling*/
+    .container_flex{
+        display:flex;
+        gap:10px;
+        
+        
+    }
+
+    .heading .description{
+        margin-bottom: 20px;
+        line-height: 35px;
+        color:#222222;
+        margin: 0 0 20px 70px;
+        font-size:15px ;
+        display: block;
+        
+    }
+
+    .about .image1{
+        min-width: 250px;
+        min-height: 250px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+    }
+    
+    .about .image2{
+        min-width:225px; 
+        min-height: 220px;
+        position: relative;
+        bottom: 0px;
+        z-index: 2;
+        right: 10%;
+        border-radius: 20px;
+    }
+
+}
+
+/*Original Styling of the extra information when the screen is maximum*/
+.left {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.right2 {
+    flex: 1;
+    color: #333;
+}
+
+.top{
+    margin-top: 10%;
+}
+
+
+
+.about{
+    margin-bottom: 10px;
+}
+
+.about .img{
+    position: relative;
+
+}
+
+.about .image1{
+    width: 310px;
+    height: 450px;
+}
+
+.about .image2{
+    width: 290px;
+    height: 220px;
+    position: relative;
+    bottom: 0px;
+    z-index: 2;
+    right: 10%;
+}
+
+.heading{
+    position: absolute;
+    top: 95%;
+    left: 40%;
+    width: 400px;
+    height: 3px;
+    background: #C1B086;
+}
+
+.heading h5{
+    font-weight: 400;
+    font-size: medium;
+    padding-top: 20px;
+    color: #5f5f5f;
+}
+
+.heading h2{
+    font-size: 50px;
+    font-weight: 400;
+    margin: 70px 0 40px 120px;
+    color: #222222;
+}
+
+
+.heading p{
+    margin-bottom: 20px;
+    line-height: 35px;
+    color:#222222;
+    margin: 0 0 20px 70px;
+    font-size:15px ;
+}
+
+/*Styling the amenities */
+.wrapper.top {
+    color: #333; 
+    text-align: center; 
+    padding: 5px 0; 
+    margin-top: 30px;
+}
+
+
+.wrapper .container {
+    max-width: 1200px; 
+}
+
+
+.wrapper h4 {
+    font-size: 2rem; 
+    color: #333; 
+    margin-bottom: 20px; 
+    
+}
+
+
+
+.wrapper .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Placing the icons in a box and styling the box*/
+.box {
+    width: 200px; 
+    height: 200px; 
+    background-color: #f7f4eb; 
+    border-radius: 15px; 
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/*Styling the icon itself*/
+.box i {
+    font-size: 3rem; 
+    color:#C1B086; 
+    margin-bottom: 15px; 
+}
+
+/*Styling the words of the icon*/
+.box span {
+    font-size: 1.2rem; 
+    color: #333; 
+    text-transform: uppercase; 
+    font-weight: bold;
+    letter-spacing: 1px; 
+}
+
+/*Styling for when cursor passes the box with the icon*/
+.box:hover {
+    transform: translateY(-5px); /*The  box with the icon lifts a little bit*/
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+}
+
+
+/*Styling the form*/
+#wrapper {
+    background-image: url('deluxe/HD-wallpaper-dreamy-beach-1280-x-800-1280x800-beach.jpg');
+    background-size: 1500px 650px;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align:center;
+    padding: 40px 0;
+}
+
+#right {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#right h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+#form div {
+    margin-bottom: 20px;
+}
+
+#form div span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/*Styling the button for booking*/
+.btn {
+    background-color: #b5a06a;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/*Styling for the popoup when the button is clicked*/
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1); /*This scaling makes the popup very small so it easily hidden*/
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s,top 0.4s ;
+
+}
+ 
+/*When the openPopup function is effevted*/
+.open-popup{
+    visibility: visible;
+    top: 300%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+/*Styling for the check mark*/
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+
+}
+.popup p{
+    font-size: 16px;
+}
+
+/*Styling for the OK button*/
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #4c9731;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+/*Styling for the footer*/
+#main-footer{
+    text-align: center;
+    background: #444;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+}

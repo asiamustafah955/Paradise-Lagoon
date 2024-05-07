@@ -1,0 +1,309 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 60px;
+    
+}
+
+.room{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    
+    
+    
+}
+.image {
+   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+   height: 400px;
+   border-radius:5px;
+   max-width: 500px;
+    
+}
+
+.img-link:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.room_details{
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    margin-inline: 0rem;
+    padding: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transform: translateY(-3%);
+    width: 450px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}   
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Playfair Display;
+    font-weight: 900;
+    font-size: 90px;
+    color: #333;
+}
+
+body {
+    overflow: auto;
+    background: linear-gradient(100deg, #fadbd8, #85c1e9);
+    animation: gradient-animation 5s ease-in-out infinite;
+    
+}
+
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.room_details h4{
+    text-align: left;
+    line-height: .25; /* Adjust this value to change the spacing */
+}
+
+h3{
+    font-family: Playfair Display;
+    font-size: 40px;
+    font-weight: 200px;
+    color: #333;
+}
+
+
+
+
+
+#words{
+    font-family: Lora;
+    font-size: 30px;
+    font-weight: 600;
+    color:#f0f0f0;
+    text-align: center;
+    box-shadow: #333;
+}
+
+#memories{
+    font-family:Playfair Display ;
+    font-size: 60px;
+    text-align: center;
+    color: #333;
+}
+
+h3+p{
+    font-family: Playfair Display;
+    font-size: 20px;
+    
+    color: #333;
+    text-align:left;
+}
+
+h4{
+    font-family: Lora;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+header{
+    background-color: #fff;
+    padding: 10px;
+    margin: 0;
+    
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+
+.book{
+background-color:#779ecb; /* Match the header color */
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 35px;
+  margin-top: 10px;
+  
+  font-family: Playfair Display;
+}
+
+button:hover {
+    background-color:#5486c0; /* A darker shade for hover effect */
+  }
+
+
+
+
+.diff-rooms {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 50px;
+  }
+  
+ 
+  #img{
+    width: 125px;
+    height: 125px;
+    position: relative;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+  }
+
+  
+  
+  .link a{
+    font-weight: 500;
+    color: #333;
+    transition: 0.3s;
+    font-size: 2rem;
+    padding-right: 15px;
+    font-family: Playfair Display;
+  }
+  
+.link a:hover {
+    color:lightblue;
+  }
+
+li{
+    float:left;
+    
+}
+
+.dropdown li{
+    float: center;
+    display: block;
+    text-align: left;
+    padding-left:0px;
+    width: 100%;
+}
+
+.dropdown li:hover{
+    color: lightblue;
+}
+
+
+/* Position the dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Style the dropdown menu links */
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration:none;
+    display:block;
+}
+
+/* Show the dropdown menu on hover */
+.link:hover .dropdown {
+    display: block;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+footer p{
+    text-align: center;
+    font-size: 20px;
+    font-family: Lora;
+    color:#fff;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Responsiveness when you adjust the screen size*/
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        padding: 20px;
+    }
+   
+    .image{
+        width: 500px;
+    }
+    .room{
+        margin: 10px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    #words{
+        font-size: 30px;
+    }
+    #memories{
+        font-size: 60px;
+    }
+    .book{
+        font-size: 20px;
+    }
+   .link a {
+        font-weight: 200;
+        font-size: 15px;
+        padding-right: 1px;
+    
+}
+
+#img{
+    width: 130px;
+    height: 130px;
+    position: relative;
+  }
+  
+}   
+
+   
+
+
